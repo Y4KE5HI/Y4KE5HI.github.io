@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Dosis|" rel="stylesheet">
+        <style>
+        body {
+            background-color: #FFFFFF; /* Lilac color */
+        }
+        .btn {
+            background-color: #B098FF; /* Darker lilac color */
+            color: #FFFFFF;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border: 2px #B098FF;
+            border-radius: 12px;
+            transition: background-color 0.3s ease
+        }
+        .btn:hover {
+            background-color: #FFFFFF;
+            color: #B098FF
+        }
+        .header_text {
+            font-family: 'Dosis', serif; /* Change the font here */
+            color: #B098FF
+        }
+        .gif_container {
+            width: 50%; /* Adjusted the width of the container to fit smaller image */
+            margin: 0 auto; /* Centered the container */
+            position: relative; /* Added position relative to position the buttons */
+        }
+        img {
+            max-width: 100%; /* Set maximum width for image */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .message {
+            position: absolute; /* Position the message absolutely */
+            bottom: 120px; /* Adjust the distance from the buttons */
+            left: 50%; /* Center the message horizontally */
+            transform: translateX(-50%); /* Center the message horizontally */
+            text-align: center;
+            color: #B098FF; /* Match color with header text */
+            font-family: 'Dosis', serif; /* Change the font here */
+            font-size: 20px;
+        }
+    </style>
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Will You Be My Valentine???</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media1.tenor.com/m/u8FqYvg4dxIAAAAC/transparent-milk-and-mocha.gif" alt="Cute animated illustration">
+            </div>
+            <div class="message">Bet you can't press the no button</div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()">No</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+			var maxX = window.innerWidth - document.getElementById('noButton').offsetWidth;
+        		var maxY = window.innerHeight - document.getElementById('noButton').offsetHeight;
+        		var x = Math.random() * maxX * 0.9; // Adjusted for faster movement
+        		var y = Math.random() * maxY * 0.9; // Adjusted for faster movement
+        		document.getElementById('noButton').style.left = `${x}px`;
+        		document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+</html>  

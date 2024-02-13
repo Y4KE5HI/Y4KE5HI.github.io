@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="yes_styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+        <style>
+            .header_text {
+                font-family: 'Dosis', serif; /* Change the font here */
+            }
+            .text{
+                font-family: 'Dosis', serif; /* Change the font here */
+            }
+            .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .write-letter-btn {
+            background-color: #FFFFFF;
+            color: #b098ff;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border: 2px solid white;
+            border-radius: 12px;
+            transition: background-color 0.3s ease;
+        }
+        .write-letter-btn:hover {
+            background-color: #b098ff;
+            color: #FFFFFF
+        }
+        </style>
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">I love you so much</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" alt="Cute animated illustration">
+            </div>
+            <p class = "text"> I can't wait to see you!!</p>
+            <div class="button-container">
+                <button class="write-letter-btn" onclick="goToLetterPage()" onmouseover="moveButton()">Click Here</button>
+            </div>
+        </div>
+        <script>
+            function goToLetterPage() {
+                window.location.href = "letter.html";
+            }
+        </script>
+    </body> 
+</html>
